@@ -4,7 +4,7 @@
 
 Below are the containers and files we would like to add to our repository:
 
-A Makefile for easy command execution. /
+A Makefile for easy command execution. \
 A virtual environment setup for dependency management.
 A devcontainer configuration for GitHub Codespaces
 A simple Python script with functions.

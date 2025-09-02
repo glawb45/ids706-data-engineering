@@ -11,3 +11,8 @@ A simple Python script with functions.\
 Unit tests to ensure code correctness.\
 GitHub Actions for continuous integration to automate linting and testing.\
 Github Copilot for AI-assisted coding.\
+
+### Goal
+
+The goal of this project make a basic GitHub repository with multiple working files to give us an idea of what a pipeline may look like.\
+Our main and test files will correspond to a basic "Hello World" document.

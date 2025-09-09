@@ -4,3 +4,7 @@ pytest
 click
 black
 pytest-cov
+numpy
+pandas
+seaborn
+matplotlib

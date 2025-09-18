@@ -7,6 +7,7 @@ A devcontainer configuration for GitHub Codespaces\
 A Python Jupyter Notebook.\
 GitHub Actions for continuous integration to automate linting and testing.\
 Github Copilot for AI-assisted coding.
+A docker file to use globally if needed.
 
 ### Goal
 
@@ -64,6 +65,18 @@ seaborn
 matplotlib
 scikit-learn
 ```
+
+## Create a docker file
+```bash
+docker build -t <image_name> .
+docker run -d -p --name <container_name> <image_name>
+```
+
+This will create a docker file to be used globally and contain both the image and container name.
+
+
+![Docker file and port created](Screenshot 2025-09-18 at 1.55.40 PM.png)
+
 
 ## VS Code Dev Containers (Suggested)
 
@@ -258,6 +271,25 @@ We can also see that the precision rate is 91% — which tells us that our model
 KNN has its pros and cons with this data. One certain downside is converting all the string categorical variables into numeric variables — it makes it difficult to determine which factors correspond to the category when you have an abundance of categories. However, we don't have too many overall variables here, so KNN seems to be a fine choice.
 
 On the other hand, the model-making method is generally better for smaller datasets; i.e. not when we have 40,000+ rows of data. We could have chosen another method here which likely could have worked better. Now knowing that K = 13 is optimal, we could also go with Quadratic Discriminant Analysis because, as I said before, as K increases, the decision boundary becomes more linear. If we want a method that keeps the boundaries fluid, we can go with QDA in the future.
+
+## Run code
+
+Run the following chunk to run our code
+
+```bash
+python GL_DE_HW2.py
+```
+
+
+## Run test cases
+
+Run test_analysis.py to run all test cases, including cleaning the dataset, drop missing values, calculate summmary statistics and test our modeling pipeline.
+
+```bash
+python test_analysis.py
+```
+
+![Test cases passed](Screenshot 2025-09-18 at 12.52.47 PM.png)
 
 
 ## Commit and push your changes via commands or User Interface

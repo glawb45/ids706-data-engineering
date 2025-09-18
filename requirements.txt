@@ -4,8 +4,8 @@ pytest
 click
 black
 pytest-cov
-numpy
 pandas
 seaborn
 matplotlib
 scikit-learn
+numpy

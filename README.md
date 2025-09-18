@@ -75,7 +75,7 @@ docker run -d -p --name <container_name> <image_name>
 This will create a docker file to be used globally and contain both the image and container name.
 
 
-![Docker file and port created](Screenshot 2025-09-18 at 1.55.40 PM.png)
+![Docker file and port created](Docker.png)
 
 
 ## VS Code Dev Containers (Suggested)
@@ -289,7 +289,7 @@ Run test_analysis.py to run all test cases, including cleaning the dataset, drop
 python test_analysis.py
 ```
 
-![Test cases passed](Screenshot 2025-09-18 at 12.52.47 PM.png)
+![Test cases passed](Test_Cases.png)
 
 
 ## Commit and push your changes via commands or User Interface

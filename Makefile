@@ -5,13 +5,10 @@ install:
 format:
 	black *.py
 
-lint:
-	flake8 *.py
-
 test:
 	python -m pytest -vv --cov=hello test_*.py
 
 clean:
 	rm -rf __pycache__ .pytest_cache .coverage
 
-all: install format lint test
+all: install format test

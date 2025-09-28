@@ -39,16 +39,16 @@ install:
 format:
 	black *.py
 
-lint:
-	flake8 hello.py
-
 test:
-	python -m pytest -vv --cov=hello test_hello.py
+	python -m pytest -vv --cov=hello test_*.py
 
 clean:
-    rm -rf __pycache__ .pytest_cache .coverage
+	rm -rf __pycache__ .pytest_cache .coverage
 
-all: install format lint test
+flake8:
+	flake8 --ignore=E203,W503,E501 .
+
+all: install format test
 
 ```
 

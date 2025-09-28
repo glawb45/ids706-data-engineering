@@ -274,6 +274,18 @@ KNN has its pros and cons with this data. One certain downside is converting all
 
 On the other hand, the model-making method is generally better for smaller datasets; i.e. not when we have 40,000+ rows of data. We could have chosen another method here which likely could have worked better. Now knowing that K = 13 is optimal, we could also go with Quadratic Discriminant Analysis because, as I said before, as K increases, the decision boundary becomes more linear. If we want a method that keeps the boundaries fluid, we can go with QDA in the future.
 
+## Refactor Code
+
+I refactored a few sections of my code, particularly including a `flake8` portion in the Makefile and updating one method and its variables altogether.
+
+In the clean_dataset method, I made a new method to call that original one called `cleaned_dataset_fun`. In addition, this function with the original code the variable renamed from `df` to `new_df`. I have attached screenshots of the changes below:
+
+![Updated clean dataset function](Clean_Dataset.png)
+
+![Workflow passing](Workflow.png)
+
+![Updated Makefile](Flake8.png)
+
 ## Run code
 
 Run the following chunk to run our code

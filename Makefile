@@ -11,4 +11,7 @@ test:
 clean:
 	rm -rf __pycache__ .pytest_cache .coverage
 
+flake8:
+	flake8 --ignore=E203,W503,E501 .
+
 all: install format test

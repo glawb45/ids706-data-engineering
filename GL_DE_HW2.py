@@ -20,12 +20,15 @@ def load_dataset(path: str) -> pd.DataFrame:
     return pd.read_excel(path)
 
 
-def clean_dataset(df: pd.DataFrame) -> pd.DataFrame:
+def clean_dataset(new_df: pd.DataFrame) -> pd.DataFrame:
+    return cleaned_dataset_fun(new_df)
+
+def cleaned_dataset_fun(new_df):
     """Clean common data entry issues."""
-    df = df.copy()
-    df['contact'] = df['contact'].replace('telephonee', 'telephone')
-    df['day_of_week'] = df['day_of_week'].replace('fr', 'fri')
-    return df
+    new_df = new_df.copy()
+    new_df['contact'] = new_df['contact'].replace('telephonee', 'telephone')
+    new_df['day_of_week'] = new_df['day_of_week'].replace('fr', 'fri')
+    return new_df
 
 
 def drop_missing(df: pd.DataFrame) -> pd.DataFrame:

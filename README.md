@@ -9,6 +9,8 @@ GitHub Actions for continuous integration to automate linting and testing.\
 Github Copilot for AI-assisted coding.
 A docker file to use globally if needed.
 
+[![Python Template for IDS706](https://github.com/glawb45/ids706-data-engineering/actions/workflows/main.yml/badge.svg?branch=data-analysis)](https://github.com/glawb45/ids706-data-engineering/actions/workflows/main.yml)
+
 ### Goal
 
 The goal of this project is to perform basic data analysis using a banking dataset. We will start with EDA, including designing visualizations, and make a machine learning model to predict whether a customer will default on their credit or not.

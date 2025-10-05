@@ -12,3 +12,4 @@ numpy
 openpyxl
 psycopg2-binary
 python-dotenv
+plotly

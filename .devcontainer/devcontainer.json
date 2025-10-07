@@ -1,5 +1,5 @@
 {
-  "name": "IDS706 Postgres Dev",
+  "name": "IDS706 Postgres Practice",
   "dockerComposeFile": "docker-compose.yml",
   "service": "dev",
   "workspaceFolder": "/workspaces/ids706-data-engineering",
@@ -9,7 +9,7 @@
     "PGHOST": "db",
     "PGUSER": "vscode",
     "PGPASSWORD": "vscode",
-    "PGDATABASE": "duke_restaurants",
+    "PGDATABASE": "university_database",
     "PGPORT": "5432"
   }
 }

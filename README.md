@@ -1,20 +1,23 @@
-# SQL Practice
+# SQLite Practice
 
-SQL Practice with PSQL or make you own static/interactive visualization: \
-What are the 5 cheapest restaurants based on avg_cost? \
-![Query1](Query_SS/5q1.png)
+Below, we see our query results from the `university_rankings` database.
 
-Which nearby restaurants (within 5 miles) are highly rated (4.0+)?
-![Query2](Query_SS/5q2.png)
+We run our SQL queries in a single script denoted by `university.sql`.
 
-Return name, distance_miles for restaurants within 2.0 miles, ordered by distance. \
-![Query3](Query_SS/6q1.png)
+We first use the `INSERT INTO` and `VALUES` commands to put the data into the table for Duke Tech. \
+![Query1](SQL_SS/Q1.png)
 
-Show the top 3 restaurants by rating (highest first). \
-![Query4](Query_SS/6q2.png)
+We simply select the count and project that of the institutions in global top 200 in 2013. \
+![Query2](SQL_SS/Q2.png)
 
-List name, avg_cost and cost with 7.5% tax as cost_with_tax. \
-![Query5](Query_SS/6q3.png)
+Use the `UPDATE` and `SET` commands to update the score for Oxford in 2014. \
+![Query3](SQL_SS/Q3.png)
 
-How many restaurants are there per cuisine, highest count first?
-![Query6](Query_SS/6q4.png)
+Delete the scores from the table using the `DELETE FROM` command.
+![Query4](SQL_SS/Q4.png)
+
+We can also run our python script which has all our queries input as well.
+
+```bash
+python queries.py
+```

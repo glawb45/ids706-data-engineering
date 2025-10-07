@@ -1,4 +1,0 @@
-SELECT cuisine, COUNT(cuisine) AS cuisine_count
-FROM restaurants
-GROUP BY cuisine
-ORDER BY cuisine_count DESC;

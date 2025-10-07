@@ -1,5 +1,4 @@
-# import psycopg2
-# from psycopg2 import sql
+
 import sqlite3
 import pandas as pd
 import os

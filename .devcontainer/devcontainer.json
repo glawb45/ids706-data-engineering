@@ -9,7 +9,7 @@
     "PGHOST": "db",
     "PGUSER": "vscode",
     "PGPASSWORD": "vscode",
-    "PGDATABASE": "university_database",
+    "PGDATABASE": "pacers.db",
     "PGPORT": "5432"
   }
 }

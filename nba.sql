@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS Games (
   "league_id" VARCHAR(100),
   "season"  INTEGER,
   "game_type" VARCHAR(100),
-  "game_date" TIMESTAMP,
+  "game_date" DATE,
   "game_time" TIMESTAMP,
   "game_status" VARCHAR(100),
   "home_team_id" INTEGER,
@@ -85,8 +85,7 @@ LEFT JOIN Teams T
     ON P.team_id = T.team_id
 LEFT JOIN Player_Stats PS
     ON P.player_id = PS.player_id
-WHERE season = 2022 AND 
-    conference = 'Western' AND 
+WHERE conference = 'Western' AND 
     game_type = 'regular' AND 
     T.status = 'active'
 GROUP BY P.player_id
@@ -96,26 +95,37 @@ ORDER BY ppg DESC;
 --  Query 2
 WITH Playoff_Wins AS (
     SELECT
-        team_full_name,
+        T.team_full_name,
         SUM(
             CASE
-                WHEN G.home_team_id = T.team_id AND G.home_score > G.away_score THEN 1
-                WHEN G.away_team_id = T.team_id AND G.away_score > G.home_score THEN 1
-                ELSE 0
+                WHEN G.game_type = 'playoffs'
+                     AND (
+                         (G.home_team_id = T.team_id AND G.home_score > G.away_score) OR
+                         (G.away_team_id = T.team_id AND G.away_score > G.home_score)
+                     )
+                THEN 1 ELSE 0
             END
         ) AS total_wins,
-        COUNT(*) AS total_games_played
-    FROM Teams T 
-    LEFT JOIN Games G 
+        SUM(
+            CASE
+                WHEN G.game_type = 'playoffs'
+                     AND (G.home_team_id = T.team_id OR G.away_team_id = T.team_id)
+                THEN 1 ELSE 0
+            END
+        ) AS total_games_played
+    FROM Teams T
+    LEFT JOIN Games G
         ON T.team_id = G.home_team_id OR T.team_id = G.away_team_id
-    WHERE season = 2022 AND
-        game_type = 'playoffs'
-    GROUP BY team_full_name
+    GROUP BY T.team_full_name
 )
 
-SELECT team_full_name, total_games_played, total_wins
+SELECT
+    team_full_name,
+    total_games_played,
+    total_wins
 FROM Playoff_Wins
 ORDER BY total_wins DESC;
+
 
 
 --  Query 3
@@ -162,3 +172,66 @@ WHERE season = 2022 AND
 GROUP BY P.player_id, full_name, team_full_name
 ORDER BY ppg DESC
 LIMIT 5;
+
+-- Query 5
+
+WITH TeamGameStats AS (
+    SELECT
+        game_id,
+        league_id,
+        season,
+        game_date,
+        home_team_id AS team_id,
+        home_score - away_score AS plus_minus
+    FROM
+        Games
+    
+    UNION ALL
+    
+    SELECT
+        game_id,
+        league_id,
+        season,
+        game_date,
+        away_team_id AS team_id,
+        away_score - home_score AS plus_minus
+    FROM
+        Games
+),
+RankedGameStats AS (
+    SELECT
+        t.*,
+        tm.team_full_name,
+        
+        SUM(t.plus_minus) OVER (
+            PARTITION BY t.team_id
+            ORDER BY JULIANDAY(t.game_date), t.game_id 
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        ) AS running_plus_minus,
+        
+        LAG(t.plus_minus, 1) OVER (
+            PARTITION BY t.team_id
+            ORDER BY JULIANDAY(t.game_date), t.game_id
+        ) AS prev_game_plus_minus
+    FROM
+        TeamGameStats t
+    JOIN
+        Teams tm ON t.team_id = tm.team_id
+)
+SELECT
+    team_full_name,
+    game_date,
+    plus_minus AS current_game_plus_minus,
+    running_plus_minus,
+    
+    -- COALESCE: Data cleaning/transformation for LAG, replacing NULL (first game) with 0
+    COALESCE(prev_game_plus_minus, 0) AS previous_game_plus_minus,
+    
+    game_id,
+    team_id
+FROM
+    RankedGameStats
+ORDER BY
+    team_full_name,
+    JULIANDAY(game_date),
+    game_id;

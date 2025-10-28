@@ -6,11 +6,11 @@
 
 ## 2. Real-Time Data Streaming into S3
 
-![Streaming S3](AWS_SS/Streaming.png)
+![Streaming S3](AWS_S3/Streaming.png)
 
-![Streaming S3](AWS_SS2/Streaming.png)
+![Streaming S3](AWS_S32/Streaming.png)
 
-![Streaming S3](AWS_SS3/Streaming.png)
+![Streaming S3](AWS_S33/Streaming.png)
 
 ## 3. Create a Crawler to Auto-Discover Schema
 
@@ -24,8 +24,23 @@
 
 ## 5. Develop and Test ETL Scripts in Jupyter Notebook
 
+![ETL_1](AWS_SS/ETL_1.png)
+![ETL_2](AWS_SS/ETL_2.png)
+
 ## 6. Add a Trigger Function in AWS Glue
+
+![Trigger Function](AWS_SS/Trigger.png)
 
 ## 7. Create Glue Database using Athena
 
+![Query 1](AWS_SS/Q1.png)
+![Query 2](AWS_SS/Q2.png)
+![Query 3](AWS_SS/Q3.png)
+![Query 4](AWS_SS/Q4.png)
+
 ## 8. Visualize Data in QuickSight
+
+![Visualiation 1](AWS_SS/Viz_1.png)
+![Visualiation 2](AWS_SS/Viz_2.png)
+![Visualiation 3](AWS_SS/Viz_3.png)
+![Visualiation 4](AWS_SS/Viz_4.png)

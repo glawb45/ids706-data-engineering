@@ -6,11 +6,11 @@
 
 ## 2. Real-Time Data Streaming into S3
 
-![Streaming S3](AWS_S3/Streaming.png)
+![Streaming S3](AWS_SS/Streaming_S3.png)
 
-![Streaming S3](AWS_S32/Streaming.png)
+![Streaming S3](AWS_SS/Streaming_S32.png)
 
-![Streaming S3](AWS_S33/Streaming.png)
+![Streaming S3](AWS_SS/Streaming_S33.png)
 
 ## 3. Create a Crawler to Auto-Discover Schema
 

@@ -20,7 +20,6 @@ x-airflow-common: &airflow-common
     _PIP_ADDITIONAL_REQUIREMENTS: apache-airflow-providers-postgres
 
     AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
-    AIRFLOW_CONN_NBA_DB: sqlite:////opt/airflow/data/nba_db
   volumes:
     - ${AIRFLOW_PROJ_DIR:-..}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-..}/logs:/opt/airflow/logs

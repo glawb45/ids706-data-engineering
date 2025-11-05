@@ -2,6 +2,10 @@
 
 This project defines an **Apache Airflow DAG** that performs an end-to-end data pipeline for NBA data, including cleaning, merging, loading into Postgres, simple model training, and visualization.
 
+![Success](dags_ss/Success.png)
+![DAG](dags_ss/DAG.png)
+![NBA_Plot](dags_ss/analysis_plot.png)
+
 ---
 
 ## 📋 Overview
@@ -108,7 +112,3 @@ cd <your-repo-name>
 Train Model     Visualization
    ↓                  ↓
         Cleanup Folder
-
-![Success](dags_ss/Success.png)
-![DAG](dags_ss/DAG.png)
-![NBA_Plot](dags_ss/analysis_plot.png)

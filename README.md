@@ -108,3 +108,7 @@ cd <your-repo-name>
 Train Model     Visualization
    ↓                  ↓
         Cleanup Folder
+
+![Success](dags_ss/Success.png)
+![DAG](dags_ss/DAG.png)
+![NBA_Plot](dags_ss/analysis_plot.png)

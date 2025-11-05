@@ -2,10 +2,6 @@
 
 This project defines an **Apache Airflow DAG** that performs an end-to-end data pipeline for NBA data, including cleaning, merging, loading into Postgres, simple model training, and visualization.
 
-![Success](dags_ss/Success.png)
-![DAG](dags_ss/DAG.png)
-![NBA_Plot](dags_ss/analysis_plot.png)
-
 ---
 
 ## 📋 Overview
@@ -95,11 +91,10 @@ Place these files in `/opt/airflow/data/` **before running the DAG**:
 ## 🧰 Setup Instructions
 
 ### 1️⃣ Clone and Enter Directory
+
 ```bash
 git clone <your-repo-url>
 cd <your-repo-name>
-
-## Dag Dependencies Overview
 
 [Players, Teams, Games, Player_Stats]
             ↓
@@ -112,3 +107,16 @@ cd <your-repo-name>
 Train Model     Visualization
    ↓                  ↓
         Cleanup Folder
+
+```
+
+## DAG Runs
+
+### Successful Runs
+![Success](dags_ss/Success.png)
+
+### DAG
+![DAG](dags_ss/DAG.png)
+
+## Visualization
+![NBA_Plot](dags_ss/analysis_plot.png)

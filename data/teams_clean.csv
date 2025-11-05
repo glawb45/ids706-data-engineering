@@ -1,0 +1,31 @@
+team_id,league_id,team_full_name,division,conference,status
+0,NBA,New Orleans Pelicans,Southwest,Western,active
+1,NBA,Atlanta Hawks,Southeast,Eastern,active
+2,NBA,Dallas Mavericks,Southwest,Western,active
+3,NBA,Boston Celtics,Atlantic,Eastern,active
+4,NBA,Denver Nuggets,Northwest,Western,active
+5,NBA,Cleveland Cavaliers,Central,Eastern,active
+6,NBA,Golden State Warriors,Pacific,Western,active
+7,NBA,Chicago Bulls,Central,Eastern,active
+8,NBA,Houston Rockets,Southwest,Western,active
+9,NBA,Miami Heat,Southeast,Eastern,active
+10,NBA,LA Clippers,Pacific,Western,active
+11,NBA,Milwaukee Bucks,Central,Eastern,active
+12,NBA,Los Angeles Lakers,Pacific,Western,active
+13,NBA,Brooklyn Nets,Atlantic,Eastern,active
+14,NBA,Minnesota Timberwolves,Northwest,Western,active
+15,NBA,New York Knicks,Atlantic,Eastern,active
+16,NBA,Phoenix Suns,Pacific,Western,active
+17,NBA,Orlando Magic,Southeast,Eastern,active
+18,NBA,Portland Trail Blazers,Northwest,Western,active
+19,NBA,Indiana Pacers,Central,Eastern,active
+20,NBA,Sacramento Kings,Pacific,Western,active
+21,NBA,Philadelphia 76ers,Atlantic,Eastern,active
+22,NBA,San Antonio Spurs,Southwest,Western,active
+23,NBA,Toronto Raptors,Atlantic,Eastern,active
+24,NBA,Oklahoma City Thunder,Northwest,Western,active
+25,NBA,Washington Wizards,Southeast,Eastern,active
+26,NBA,Utah Jazz,Northwest,Western,active
+27,NBA,Detroit Pistons,Central,Eastern,active
+28,NBA,Memphis Grizzlies,Southwest,Western,active
+29,NBA,Charlotte Hornets,Southeast,Eastern,active

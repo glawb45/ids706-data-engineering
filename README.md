@@ -120,3 +120,30 @@ Train Model     Visualization
 
 ## Visualization
 ![NBA_Plot](dags_ss/analysis_plot.png)
+
+## Implementation
+
+### Key Technologies
+
+Apache Airflow — workflow orchestration
+PostgreSQL — data warehouse layer
+Pandas — cleaning, transformation, data manipulation
+Matplotlib — visualization
+scikit-learn — logistic regression model
+Docker Compose — reproducible environment
+
+### Run Docker
+
+1. Start Airflow
+
+```bash
+cd .devcontainer
+docker compose build --no-cache
+docker compose up -d
+```
+
+2. Open the UI http://localhost:8080 and trigger the DAG netflix_pipeline
+
+3. Monitor each task’s logs for progress
+
+4. Review generated outputs and logs

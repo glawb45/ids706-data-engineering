@@ -64,13 +64,24 @@ Run all of these commands in different terminals, but simultaneously.
 python producer.py
 ```
 
+![Producer](SS/Producer.png)
+
 ```bash
 python consumer.py
 ```
 
-```
+![Consumer](SS/Consumer.png)
+
+
+```bash
 streamlit run dashboard.py
 ```
+
+![Dashboard_1](SS/Dashboard_1.png)
+![Dashboard_2](SS/Dashboard_2.png)
+![Dashboard_3](SS/Dashboard_3.png)
+![Dashboard_4](SS/Dashboard_4.png)
+
 
 
 

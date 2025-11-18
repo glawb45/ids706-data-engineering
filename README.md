@@ -56,7 +56,21 @@ The script then enters a continuous loop, actively listening for messages on the
 
 ## Dashboard
 
+Deploy this dashboard which will open in browser, including pie charts and bar charts.
 
+Run all of these commands in different terminals, but simultaneously.
+
+```bash
+python producer.py
+```
+
+```bash
+python consumer.py
+```
+
+```
+streamlit run dashboard.py
+```
 
 
 
